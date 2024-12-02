@@ -1,0 +1,349 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: black;
+    color: #ecf0f1;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100%;
+}
+
+.mainlogo img {
+    width: 100%;
+    text-align: center;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav ul li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust icon size */
+.nav ul li a img {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Navigation link styles */
+.nav ul li a {
+    width: 100%;
+    text-decoration: none;
+    color: #ecf0f1;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.nav ul li a:hover {
+    background-color: #63aa2e;
+}
+
+/* Content Styles */
+.header {
+    height: 100px;
+    background: rgb(99, 170, 46);
+    background: linear-gradient(90deg, rgba(99, 170, 46, 1) 35%, rgba(127, 230, 21, 1) 100%);
+    width: 1030px;
+    margin-left: 250px;
+}
+
+.header p {
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+.innercontent {
+    margin-left: 250px;
+}
+:root {
+  --rad: .7rem;
+  --dur: .3s;
+  --color-dark: #2f2f2f;
+  --color-light: #fff;
+  --color-brand: #57bd84;
+  --font-fam: 'Lato', sans-serif;
+  --height: 5rem;
+  --btn-width: 6rem;
+  --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+//Vars 
+:root {
+  --rad: .7rem;
+  --dur: .3s;
+  --color-dark: #2f2f2f;
+  --color-light: #fff;
+  --color-brand: #57bd84;
+  --font-fam: 'Lato', sans-serif;
+  --height: 5rem;
+  --btn-width: 6rem;
+  --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+
+.search-container{
+  gap: 10px;
+  display: flex;
+  width: 90%;
+  justify-content: flex-end;
+  align-items: center;
+}
+form {
+    height: 30px;
+    display: flex;
+    position: relative;
+    width: 20rem;
+    background-color: #000000;
+  border-radius: var(--rad);
+}
+input, .searchbtn {
+  height: var(--height);
+  font-family: var(--font-fam);
+  border: 0;
+  color: var(--color-dark);
+  font-size: 1.8rem;
+}
+input[type="search"] {
+  outline: 0;
+  width: 100%;
+  background: var(--color-light);
+  padding: 0 1.6rem;
+  border-radius: var(--rad);
+  appearance: none; 
+  transition: all var(--dur) var(--bez);
+  transition-property: width, border-radius;
+  z-index: 1;
+  position: relative;
+}
+#search{
+  height: 30px;
+  font-size: 20px;
+}
+.searchbtn {
+  color: #ffffff;
+  font-size: 24px;
+  display: none; // prevent being able to tab to it
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--btn-width);
+  font-weight: bold;
+  background-color: #000000;
+  border-radius: 0 var(--rad) var(--rad) 0;
+  cursor: pointer;
+}
+input:not(:placeholder-shown) {
+  border-radius: var(--rad) 0 0 var(--rad);
+  width: calc(100% - var(--btn-width));
+  + .searchbtn {
+    width: 90px;
+    height: 20px;
+    display: block;
+  }
+}
+label {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+.search-profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-right: 20px; /* Add spacing from the edge */
+}
+
+/* Profile container styles */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the profile image and name */
+}
+
+.profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Makes the image circular */
+    border: 2px solid #fff; /* Optional border for the image */
+}
+
+.profile-name {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+/* Profile container styles */
+.profile-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Triangular button */
+/* Triangular button with clip-path */
+.profile-toggle {
+    width: 20px; /* Adjust the size */
+    height: 10px;
+    background-color: white; /* Button color */
+    clip-path: polygon(50% 100%, 0 0, 99% 0); /* Triangular shape */
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: relative; /* Ensures correct positioning with the profile container */
+    transition: transform 0.3s ease; /* Smooth rotation effect */
+}
+
+/* Profile menu styles */
+.profile-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 40px; /* Adjust as needed to align under the profile */
+    right: 0;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu list */
+.profile-menu ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.profile-menu ul li {
+    margin: 5px 0;
+}
+
+.profile-menu ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-menu ul li a:hover {
+    background-color: #63aa2e;
+}
+
+/* Show menu when active */
+.profile-container.active .profile-menu {
+    display: block;
+}
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three boxes per row */
+    gap: 20px; /* Space between the boxes */
+    justify-items: center; /* Center align items horizontally */
+    align-items: center; /* Center align items vertically */
+    padding: 20px; /* Add padding to the container */
+}
+
+.box {
+    background-color: #c0c0c0; /* Box background color */
+    width: 200px;
+    height: 120px;
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+    text-align: center;
+}
+
+.box img {
+    width: 40px; /* Adjust icon size */
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.box h3 {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #000;
+}
+
+.box p {
+    font-size: 18px;
+    color: #63aa2e; /* Green color for the numbers */
+    margin: 0;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .box-container {
+        grid-template-columns: repeat(2, 1fr); /* Two boxes per row for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .box-container {
+        grid-template-columns: 1fr; /* One box per row for very small screens */
+    }
+}
+.footer {
+    background-color: #c0c0c0; /* Dark background */
+    color: black; /* White text */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Center text */
+    margin-top: 136px;
+}
+
+.footer-content {
+    max-width: 1200px; /* Set a max width */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Add horizontal padding for smaller screens */
+}
+
+.footer p {
+    margin: 10px 0; /* Add space above and below */
+    font-size: 14px; /* Slightly smaller font size */
+}
+
+.footer-links {
+    margin-top: 10px; /* Add space above links */
+}
+
+.footer-links a {
+    color: black; /* Light gray links */
+    text-decoration: none; /* Remove underline */
+    margin: 0 5px; /* Space between links */
+}
+
+.footer-links a:hover {
+    color: white; /* Highlight on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+

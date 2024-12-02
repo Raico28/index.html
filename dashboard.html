@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left-Side Navigation</title>
+    <link rel="stylesheet" href="dashboard_styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="mainlogo">
+            <img src="mainlogo.png">
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="#"><img src="dashboard_icon.png"> Dashboard</a></li>
+                <li><a href="#"><img src="student.png"> Student</a></li>
+                <li><a href="#"><img src="course.png"> Course</a></li>
+                <li><a href="#"><img src="faculty.png"> Faculty</a></li>
+                <li><a href="#"><img src="department.png"> Department</a></li>
+                <li><a href="#"><img src="grades.png"> Grades & Results</a></li>
+            </ul>
+        </div>
+    </div>
+
+        <div class="content">  
+            <div class="header">
+                <div>
+                    <p>Grading Management System</p>
+                </div>
+                <div class="search-container">
+                    <form onsubmit="event.preventDefault();" role="search">
+                      <label for="search">Search for stuff</label>
+                      <input id="search" type="search" placeholder="Search..." autofocus="" required="">
+                      <button type="submit" class="searchbtn">Go</button>    
+                    </form>
+                    <div class="profile-container">
+                        <img src="profile.jpg" class="profile-img">
+                        <button class="profile-toggle"></button>
+                        <nav class="profile-menu">
+                            <ul>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="index.html">Log Out</a></li>
+                            </ul>
+                        </nav>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const profileContainer = document.querySelector('.profile-container');
+                                const toggleButton = document.querySelector('.profile-toggle');
+
+                                // Toggle menu visibility
+                                toggleButton.addEventListener('click', (e) => {
+                                    e.stopPropagation(); // Prevent click from propagating to the document
+                                    profileContainer.classList.toggle('active');
+                                });
+
+                                // Close menu when clicking outside
+                                document.addEventListener('click', () => {
+                                    profileContainer.classList.remove('active');
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="innercontent">
+                <div class="box-container">
+                    <div class="box">
+                        <img src="student.png">
+                        <h3>STUDENTS</h3>
+                        <p>406</p>
+                    </div>
+                    <div class="box">
+                        <img src="faculty.png">
+                        <h3>FACULTY</h3>
+                        <p>54</p>
+                    </div>
+                    <div class="box">
+                        <img src="course.png">
+                        <h3>COURSES</h3>
+                        <p>32</p>
+                    </div>
+                    <div class="box">
+                        <img src="grades.png">
+                        <h3>GRADES & RESULT</h3>
+                        <p>406</p>
+                    </div>
+                    <div class="box">
+                        <img src="department.png">
+                        <h3>DEPARTMENT</h3>
+                        <p>13</p>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="footer-content">
+                        <p> 2024 GradeHub. All rights reserved.</p>
+                        <div class="footer-links">
+                            <a href="#">Privacy Policy</a> | 
+                            <a href="#">Terms of Service</a> | 
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+
+
+</body>
+</html>

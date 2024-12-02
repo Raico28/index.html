@@ -1,0 +1,481 @@
+body{
+	background-color: black;flex-wrap: nowrap;
+}
+p{
+	color: white;
+}
+.subheader{
+	gap: 415px;
+	display: flex;
+}
+.mainheader {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  z-index: 10;
+}
+.email{
+	margin-left: 35px;
+	gap:45px;
+	display: flex;
+}
+.emailcont1, .emailcont2{
+	align-items: center;
+	display: flex;
+	gap: 5px;
+}
+.email img{
+	height: 20px;
+	width: 20px;
+}
+.icons{
+	gap: 10px;
+	display: flex;
+	align-items: center;
+}
+.fa {
+  padding: 7px;
+  font-size: 30px;
+  width: 17px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 20px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #c0c0c0;
+  color: white;
+}
+
+.fa-twitter {
+  background: #c0c0c0;
+  color: white;
+}
+.fa-linkedin {
+  background: #c0c0c0;
+  color: white;
+}
+.fa-instagram {
+  background: #c0c0c0;
+  color: white;
+}
+.mainheader{
+	display: flex;
+}
+.logo{
+	width: 47%;
+	height: 100px;
+}
+.logo img{
+	margin-left: 20px;
+    height: 100px;
+    width: 300px;
+}
+.home:hover {
+    opacity: 0.7;
+}
+.about:hover {
+    opacity: 0.7;
+}
+.contact:hover {
+    opacity: 0.7;
+}
+ul{
+	cursor: pointer;
+	font-family: sans-serif;
+    font-size: 20px;
+	display: flex;
+	gap: 50px;
+	list-style-type: none;
+	color: white;
+	align-items: center;
+}
+.nav{
+	gap: 65px;
+	width: 750px;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+}
+
+/*search bar*/
+:root {
+  --rad: .7rem;
+  --dur: .3s;
+  --color-dark: #2f2f2f;
+  --color-light: #fff;
+  --color-brand: #57bd84;
+  --font-fam: 'Lato', sans-serif;
+  --height: 5rem;
+  --btn-width: 6rem;
+  --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+//Vars 
+:root {
+  --rad: .7rem;
+  --dur: .3s;
+  --color-dark: #2f2f2f;
+  --color-light: #fff;
+  --color-brand: #57bd84;
+  --font-fam: 'Lato', sans-serif;
+  --height: 5rem;
+  --btn-width: 6rem;
+  --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+
+.search-container{
+  display: flex;
+  width: 40%;
+}
+form {
+    display: flex;
+    position: relative;
+    width: 20rem;
+    background-color: #63aa2e;
+  border-radius: var(--rad);
+}
+input, .searchbtn {
+  height: var(--height);
+  font-family: var(--font-fam);
+  border: 0;
+  color: var(--color-dark);
+  font-size: 1.8rem;
+}
+input[type="search"] {
+  outline: 0;
+  width: 100%;
+  background: var(--color-light);
+  padding: 0 1.6rem;
+  border-radius: var(--rad);
+  appearance: none; 
+  transition: all var(--dur) var(--bez);
+  transition-property: width, border-radius;
+  z-index: 1;
+  position: relative;
+}
+#search{
+  height: 30px;
+  font-size: 20px;
+}
+.searchbtn {
+  font-size: 24px;
+  display: none; // prevent being able to tab to it
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--btn-width);
+  font-weight: bold;
+  background-color: #63aa2e;
+  border-radius: 0 var(--rad) var(--rad) 0;
+}
+input:not(:placeholder-shown) {
+  border-radius: var(--rad) 0 0 var(--rad);
+  width: calc(100% - var(--btn-width));
+  + .searchbtn {
+    cursor: pointer;
+    width: 90px;
+    height: 30px;
+    display: block;
+  }
+}
+label {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/* Slideshow container */
+/* Slideshow container styles */
+/* Slideshow container styles */
+.slideshow-container {
+  margin-top: 80px; /* Adjust this value depending on the height of your navigation bar */
+  position: relative;
+  max-width: 100%;
+  margin: 20px;
+  margin-top: 0px;
+}
+
+.mySlides {
+    display: none;
+    position: relative;
+    width: 100%;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 700px;
+}
+
+/* Fixed container on the left side */
+.fixed-container {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  width: 40%;
+  height: 90%;
+  background-color: rgba(0, 0, 0, 0.4); /* Faded background */
+  z-index: 5;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Button Styling */
+.btn {
+  cursor: pointer;
+  background-color: #000;
+  width: 330px;
+  height: 64px;
+  line-height: 64px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.34);
+}
+
+.btn span {
+  color: #fff;
+  display: block;
+  text-transform: uppercase;
+  font: bold 18px/66px Arial;
+  transform: scaleX(0.6);
+  letter-spacing: 3px;
+  transform-origin: center left;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.btn em {
+  position: absolute;
+  height: 1px;
+  background: #fff;
+  width: 47%;
+  right: 23px;
+  top: 50%;
+  transform: scaleX(0.25);
+  transform-origin: center right;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+/* Before and After pseudo-elements */
+.btn:before, .btn:after {
+  content: '';
+  background: #fff;
+  height: 50%;
+  width: 0;
+  position: absolute;
+  transition: .3s cubic-bezier(.785,.135,.15,.86);
+}
+
+.btn:before {
+  top: 0;
+  left: 0;
+  right: auto;
+}
+
+.btn:after {
+  bottom: 0;
+  right: 0;
+  left: auto;
+}
+
+/* Hover effects */
+.btn:hover {
+  transition: .3s ease-in-out;
+}
+
+.btn:hover:before {
+  width: 100%;
+  right: 0;
+  left: auto;
+}
+
+.btn:hover:after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.btn:hover span {
+  color: #000;
+}
+
+.btn:hover em {
+  background: #000;
+  transform: scaleX(1);
+}
+
+
+.slide-content h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.slide-content p {
+    font-size: 20px;
+}
+
+/* Slideshow navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots for slideshow navigation */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation for slideshow */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.image-gallery {
+  display: flex;
+  justify-content: space-around; /* Space between items */
+  align-items: center;
+  flex-wrap: wrap; /* Wrap items on smaller screens */
+  margin: 20px; /* Space around the gallery */
+  gap: 20px; /* Space between items */
+}
+
+.gallery-item {
+  background-color: #1a1a1a; /* Dark background for contrast */
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 22%; /* Adjust width for 4 containers in a row */
+}
+
+.gallery-item img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+.gallery-item p, h5{
+  color: white;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 45%; /* Two items per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    width: 100%; /* One item per row */
+  }
+}
+.media{
+  display: flex;
+  gap: 27px;
+}
+.youtube{
+  padding-left: 20px;
+}
+.footer {
+    background-color: #1a1a1a; /* Dark background */
+    color: white; /* White text */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Center text */
+    border-top: 1px solid #333; /* Subtle border on top */
+    margin-top: 30px;
+}
+
+.footer-content {
+    max-width: 1200px; /* Set a max width */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Add horizontal padding for smaller screens */
+}
+
+.footer p {
+    margin: 10px 0; /* Add space above and below */
+    font-size: 14px; /* Slightly smaller font size */
+}
+
+.footer-links {
+    margin-top: 10px; /* Add space above links */
+}
+
+.footer-links a {
+    color: #c0c0c0; /* Light gray links */
+    text-decoration: none; /* Remove underline */
+    margin: 0 5px; /* Space between links */
+}
+
+.footer-links a:hover {
+    color: white; /* Highlight on hover */
+    text-decoration: underline; /* Underline on hover */
+}
